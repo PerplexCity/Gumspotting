@@ -12,7 +12,7 @@ justspots <- data.frame(gumspots$SQ1, gumspots$SQ2, gumspots$SQ3, gumspots$SQ4,
                         gumspots$SQ5, gumspots$SQ6, gumspots$SQ7, gumspots$SQ8, 
                         gumspots$SQ9, gumspots$SQ10, gumspots$SQ11, gumspots$SQ12, 
                         gumspots$SQ13, gumspots$SQ14, gumspots$SQ15, gumspots$SQ16)
-stack <- melt(justspots)
+stack <- melt(justspots, na.rm=T, value.name="spots")
 
 #general gumspot graph
 gumgraf <- ggplot(gumspots, aes(Start)) + 
@@ -45,7 +45,7 @@ gumgraf2 <- ggplot(gumspots[41:100,], aes(Start)) +
 #R is famously difficult to use for dual y-axes graphs 
 #So I just scaled the PCI info down in the first graph ("/5000")
 #And then just photoshopped the two together
-gumfraf2a <- ggplot(gumspots[41:100,], aes(Start)) + 
+gumgraf2a <- ggplot(gumspots[41:100,], aes(Start)) + 
   geom_line(aes(y=SQ.AVG), color="steelblue2") + 
   geom_line(aes(y=X5.BLK.SQAVG), colour="blue4", size=1.3) + 
   geom_line(aes(y=Per.Capita.Income), colour="darkolivegreen4", size=1.3) +
