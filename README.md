@@ -1,5 +1,5 @@
 # Gumspotting
-The repository contains all data and scripts used in the analysis for the "Gumspotting" article on perplex.city.
+The repository contains all data and scripts used in the analysis for the ["Gumspotting" article on perplex.city](https://perplex.city/gumspotting-53ea3137087#.p7nxby6h3).
 To create the GIF of the 5-year gumspot simulation, the python script [spots_sim.py](../master/spots_sim.py) spits out 52 million trials worth of 1-in-a-million chances into the [spots.csv](../master/spots.csv) (usually somewhere between 40 and 55 spots will be created).
 From there, you can run [spot_GIF.R](../master/spot_GIF.R) in R Studio to create the images. You'll have to restrict the rows one-by-one to create every single image.
 
