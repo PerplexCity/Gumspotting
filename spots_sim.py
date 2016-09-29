@@ -2,7 +2,7 @@ import random
 from random import randint
 import csv
 
-writer = csv.writer(open('spotsim.csv', 'wb'))
+writer = csv.writer(open('spots.csv', 'wb'))
 
 spots =[["posx", "posy", "radius"]]
 
